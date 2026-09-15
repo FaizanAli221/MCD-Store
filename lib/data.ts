@@ -23,13 +23,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1508215885820-4585e56135c8?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
-    galleryImages: [
       "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
-      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1508215885820-4585e56135c8?w=800&q=80",
+      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
     ],
     price: 6500,
     compareAtPrice: null,
@@ -61,12 +60,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=800&q=80",
+      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
-      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=800&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
     ],
     price: 5995,
     compareAtPrice: 6395,
@@ -98,12 +97,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
+      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
-    galleryImages: [
       "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
+    galleryImages: [
       "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
+      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
     ],
     price: 5995,
     compareAtPrice: 6395,
@@ -134,12 +133,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
+      "https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
-      "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
+      "https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80",
     ],
     price: 3995,
     compareAtPrice: 4495,
@@ -170,12 +169,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
-    galleryImages: [
       "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&q=80",
+      "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=80",
     ],
     price: 7200,
     compareAtPrice: null,
@@ -206,12 +205,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=800&q=80",
+      "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+      "https://images.unsplash.com/photo-1502904550040-7534597429ae?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=800&q=80",
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+      "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=800&q=80",
+      "https://images.unsplash.com/photo-1502904550040-7534597429ae?w=800&q=80",
     ],
     price: 4850,
     compareAtPrice: 5300,
@@ -242,12 +241,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
     ],
     price: 6995,
     compareAtPrice: 7495,
@@ -278,12 +277,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
+      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
-      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&q=80",
     ],
     price: 3450,
     compareAtPrice: null,
@@ -315,12 +314,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
-      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80",
+      "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
     ],
     price: 4200,
     compareAtPrice: 4800,
@@ -391,9 +390,10 @@ export const PRODUCTS: Product[] = [
     image:
       "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
     galleryImages: [
       "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
     ],
     price: 5450,
     compareAtPrice: 5995,
@@ -460,11 +460,12 @@ export const PRODUCTS: Product[] = [
     },
     sizes: ["S", "M", "L", "XL"],
     image:
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
+      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
+      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
     ],
     price: 3200,
     compareAtPrice: 3600,
@@ -495,11 +496,11 @@ export const PRODUCTS: Product[] = [
     },
     sizes: ["One Size"],
     image:
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=800&q=80",
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
     ],
     price: 2450,
     compareAtPrice: 2800,
@@ -530,11 +531,11 @@ export const PRODUCTS: Product[] = [
     },
     sizes: ["One Size"],
     image:
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&q=80",
     hoverImage:
       "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&q=80",
     ],
     price: 1850,
     compareAtPrice: null,
@@ -565,11 +566,11 @@ export const PRODUCTS: Product[] = [
     },
     sizes: DEFAULT_SIZES,
     image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?w=800&q=80",
     hoverImage:
-      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=800&q=80",
-    galleryImages: [
       "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?w=800&q=80",
     ],
     price: 2950,
     compareAtPrice: 3300,
