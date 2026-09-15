@@ -6,16 +6,28 @@ import React, {
   useContext,
   useMemo,
   useState,
+  useEffect,
 } from "react";
 import { Product } from "./types";
 
+export type CartItem = {
+  product: Product;
+  quantity: number;
+  selectedSize?: string;
+  selectedColor?: string;
+};
+
 type StoreContextValue = {
-  cart: Record<string, number>; // productId -> quantity
+  cart: Record<string, CartItem>; // item key -> CartItem
   wishlist: Set<string>;
   cartCount: number;
   wishlistCount: number;
-  addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
+  isCartOpen: boolean;
+  setIsCartOpen: (open: boolean) => void;
+  addToCart: (product: Product, quantity?: number, selectedSize?: string, selectedColor?: string) => void;
+  removeFromCart: (itemKey: string) => void;
+  updateQuantity: (itemKey: string, quantity: number) => void;
+  clearCart: () => void;
   toggleWishlist: (productId: string) => void;
   isWishlisted: (productId: string) => boolean;
 };
@@ -23,22 +35,78 @@ type StoreContextValue = {
 const StoreContext = createContext<StoreContextValue | null>(null);
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
-  const [cart, setCart] = useState<Record<string, number>>({});
+  const [cart, setCart] = useState<Record<string, CartItem>>({});
   const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  const addToCart = useCallback((product: Product) => {
-    setCart((prev) => ({
-      ...prev,
-      [product.id]: (prev[product.id] ?? 0) + 1,
-    }));
+  useEffect(() => {
+    try {
+      const savedCart = localStorage.getItem("mcd_cart");
+      const savedWishlist = localStorage.getItem("mcd_wishlist");
+      if (savedCart) setCart(JSON.parse(savedCart));
+      if (savedWishlist) setWishlist(new Set(JSON.parse(savedWishlist)));
+    } catch {
+      // Ignore localStorage errors
+    }
+    setMounted(true);
   }, []);
 
-  const removeFromCart = useCallback((productId: string) => {
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      localStorage.setItem("mcd_cart", JSON.stringify(cart));
+      localStorage.setItem("mcd_wishlist", JSON.stringify(Array.from(wishlist)));
+    } catch {
+      // Ignore localStorage errors
+    }
+  }, [cart, wishlist, mounted]);
+
+  const addToCart = useCallback(
+    (product: Product, quantity = 1, selectedSize = "M", selectedColor?: string) => {
+      const itemKey = `${product.id}-${selectedSize}-${selectedColor || "default"}`;
+      setCart((prev) => {
+        const existing = prev[itemKey];
+        const currentQty = existing ? existing.quantity : 0;
+        return {
+          ...prev,
+          [itemKey]: {
+            product,
+            quantity: currentQty + quantity,
+            selectedSize,
+            selectedColor: selectedColor || product.colors?.[0],
+          },
+        };
+      });
+      setIsCartOpen(true);
+    },
+    []
+  );
+
+  const removeFromCart = useCallback((itemKey: string) => {
     setCart((prev) => {
       const next = { ...prev };
-      delete next[productId];
+      delete next[itemKey];
       return next;
     });
+  }, []);
+
+  const updateQuantity = useCallback((itemKey: string, quantity: number) => {
+    if (quantity <= 0) {
+      removeFromCart(itemKey);
+      return;
+    }
+    setCart((prev) => {
+      if (!prev[itemKey]) return prev;
+      return {
+        ...prev,
+        [itemKey]: { ...prev[itemKey], quantity },
+      };
+    });
+  }, [removeFromCart]);
+
+  const clearCart = useCallback(() => {
+    setCart({});
   }, []);
 
   const toggleWishlist = useCallback((productId: string) => {
@@ -56,7 +124,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   );
 
   const cartCount = useMemo(
-    () => Object.values(cart).reduce((sum, qty) => sum + qty, 0),
+    () => Object.values(cart).reduce((sum, item) => sum + item.quantity, 0),
     [cart]
   );
 
@@ -65,8 +133,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     wishlist,
     cartCount,
     wishlistCount: wishlist.size,
+    isCartOpen,
+    setIsCartOpen,
     addToCart,
     removeFromCart,
+    updateQuantity,
+    clearCart,
     toggleWishlist,
     isWishlisted,
   };

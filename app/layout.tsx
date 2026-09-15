@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { StoreProvider } from "@/lib/store";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import CartDrawer from "@/components/CartDrawer";
 import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({
@@ -26,7 +28,9 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="font-sans bg-paper text-ink antialiased pb-16 md:pb-0">
         <StoreProvider>
+          <AnnouncementBar />
           {children}
+          <CartDrawer />
           <MobileNav />
         </StoreProvider>
       </body>

@@ -2,9 +2,14 @@ export type Product = {
   id: string;
   slug: string;
   title: string;
+  description?: string;
+  features?: string[];
+  specifications?: Record<string, string>;
+  sizes?: string[];
   image: string;
   hoverImage?: string;
-  price: number; // current/sale price, in PKR (smallest display unit = whole rupees)
+  galleryImages?: string[];
+  price: number; // current/sale price, in PKR
   compareAtPrice?: number | null; // original price, shown struck through
   rating: number; // 0-5
   reviewCount: number;
@@ -12,7 +17,7 @@ export type Product = {
   colors?: string[];
   inStock: boolean;
   createdAt: string; // ISO date, used for "Newest" sorting
-  bestSellerRank?: number | null; // lower = better seller, null = not a best seller
+  bestSellerRank?: number | null;
 };
 
 export type SortKey =

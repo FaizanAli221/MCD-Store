@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Heart, ShoppingCart } from "lucide-react";
 import { Product, GridColumns } from "@/lib/types";
 import { formatPKR, discountPercent, cn } from "@/lib/utils";
@@ -20,15 +21,15 @@ export default function ProductCard({
   const titleSize = columns >= 4 ? "text-sm" : "text-base";
 
   return (
-    <div className="group">
-      <div className="relative aspect-[3/4] overflow-hidden bg-cream">
+    <div className="group flex flex-col justify-between">
+      <div className="relative aspect-[3/4] overflow-hidden bg-cream border border-line rounded">
         {discount !== null && (
-          <span className="absolute left-2 top-2 z-10 rounded-sm bg-ink px-2 py-1 text-[11px] font-semibold text-paper">
+          <span className="absolute left-2 top-2 z-10 rounded bg-ink px-2 py-1 text-[11px] font-semibold text-paper">
             -{discount}%
           </span>
         )}
         {!product.inStock && (
-          <span className="absolute right-2 top-2 z-10 rounded-sm bg-paper/90 px-2 py-1 text-[11px] font-medium text-ink">
+          <span className="absolute right-2 top-2 z-10 rounded bg-paper/90 px-2 py-1 text-[11px] font-medium text-ink">
             Sold out
           </span>
         )}
@@ -37,7 +38,7 @@ export default function ProductCard({
           onClick={() => toggleWishlist(product.id)}
           aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
           aria-pressed={wishlisted}
-          className="absolute right-2 bottom-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-paper/90 opacity-0 transition-opacity duration-200 group-hover:opacity-100 focus-visible:opacity-100"
+          className="absolute right-2 bottom-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-paper/90 opacity-0 transition-opacity duration-200 group-hover:opacity-100 focus-visible:opacity-100 shadow-sm"
         >
           <Heart
             size={16}
@@ -45,29 +46,31 @@ export default function ProductCard({
           />
         </button>
 
-        <Image
-          src={product.image}
-          alt={product.title}
-          fill
-          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-          className={cn(
-            "object-cover transition-opacity duration-300",
-            product.hoverImage && "group-hover:opacity-0"
-          )}
-        />
-        {product.hoverImage && (
+        <Link href={`/product/${product.slug}`} className="block w-full h-full">
           <Image
-            src={product.hoverImage}
-            alt=""
-            aria-hidden="true"
+            src={product.image}
+            alt={product.title}
             fill
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            className={cn(
+              "object-cover transition-opacity duration-300",
+              product.hoverImage && "group-hover:opacity-0"
+            )}
           />
-        )}
+          {product.hoverImage && (
+            <Image
+              src={product.hoverImage}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          )}
+        </Link>
 
         {/* Hover action bar */}
-        <div className="absolute inset-x-0 bottom-0 flex translate-y-full bg-ink transition-transform duration-200 group-hover:translate-y-0">
+        <div className="absolute inset-x-0 bottom-0 flex translate-y-full bg-ink transition-transform duration-200 group-hover:translate-y-0 z-20">
           <button
             onClick={() => addToCart(product)}
             disabled={!product.inStock}
@@ -80,9 +83,12 @@ export default function ProductCard({
       </div>
 
       <div className="mt-3 space-y-1">
-        <h3 className={cn("font-medium leading-snug", titleSize)}>
+        <Link
+          href={`/product/${product.slug}`}
+          className={cn("font-medium leading-snug text-ink hover:underline block line-clamp-2", titleSize)}
+        >
           {product.title}
-        </h3>
+        </Link>
         <StarRating rating={product.rating} reviewCount={product.reviewCount} />
         <div className="flex items-center gap-2 pt-0.5">
           <span className={cn("font-semibold", discount !== null ? "text-sale" : "text-ink")}>
