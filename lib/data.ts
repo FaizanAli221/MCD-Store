@@ -240,12 +240,11 @@ export const PRODUCTS: Product[] = [
       Care: "Hand wash cold",
     },
     sizes: DEFAULT_SIZES,
-    image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+    image: "/images/sauna-suit.jpg",
     hoverImage:
       "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+      "/images/sauna-suit.jpg",
       "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
     ],
     price: 6995,
@@ -313,12 +312,11 @@ export const PRODUCTS: Product[] = [
       Care: "Machine wash cold inside out",
     },
     sizes: DEFAULT_SIZES,
-    image:
-      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80",
+    image: "/images/fleece-hoodie.jpg",
     hoverImage:
       "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80",
+      "/images/fleece-hoodie.jpg",
       "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800&q=80",
     ],
     price: 4200,
@@ -350,12 +348,11 @@ export const PRODUCTS: Product[] = [
       Care: "Wipe clean with damp cloth and leather conditioner",
     },
     sizes: ["12oz", "14oz", "16oz"],
-    image:
-      "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
+    image: "/images/boxing-gloves.jpg",
     hoverImage:
       "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
+      "/images/boxing-gloves.jpg",
       "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
     ],
     price: 8500,
@@ -459,12 +456,11 @@ export const PRODUCTS: Product[] = [
       Care: "Treat with leather oil occasionally",
     },
     sizes: ["S", "M", "L", "XL"],
-    image:
-      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
+    image: "/images/weightlifting-belt.jpg",
     hoverImage:
       "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
+      "/images/weightlifting-belt.jpg",
       "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
     ],
     price: 3200,
